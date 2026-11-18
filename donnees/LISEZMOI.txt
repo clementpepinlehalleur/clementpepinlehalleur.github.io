@@ -1,0 +1,59 @@
+Base de produits dérivée de scan. — export du 2026-10-13
+==========================================================
+
+Fichiers (CSV, UTF-8, séparateur virgule, compressés en gzip) :
+  - produits.csv.gz : 187552 lignes, 7142189 octets
+  - prix-open-prices.csv.gz : 1018 lignes, 15387 octets
+
+LICENCE : Open Database License (ODbL) 1.0
+Texte officiel : https://opendatacommons.org/licenses/odbl/1-0/
+Les contenus individuels de la base (valeurs, textes) sont sous Database Contents License (DbCL) 1.0 :
+https://opendatacommons.org/licenses/dbcl/1-0/
+
+En résumé (ce résumé n'a pas de valeur juridique ; seul le texte officiel fait foi), vous pouvez :
+  - copier, distribuer et utiliser la base ;
+  - créer des œuvres à partir de la base ;
+  - modifier, transformer et construire à partir de la base ;
+à condition de :
+  - citer la source (attribution ci-dessous) ;
+  - partager à l'identique : toute version modifiée de la base utilisée publiquement doit aussi être
+    proposée sous ODbL ;
+  - garder l'accès ouvert : si vous diffusez la base avec des mesures techniques de protection (DRM),
+    proposez aussi une version sans ces mesures.
+
+ATTRIBUTION (à reproduire) :
+  © les contributeurs d'Open Food Facts — https://world.openfoodfacts.org — ODbL 1.0.
+  Prix collaboratifs : Open Prices (Open Food Facts) — https://prices.openfoodfacts.org — ODbL 1.0.
+  Étiquettes américaines : Dietary Supplement Label Database (DSLD), Office of Dietary Supplements,
+  National Institutes of Health (États-Unis) — https://dsld.od.nih.gov — domaine public.
+  Aliments de marque (États-Unis) : USDA FoodData Central — https://fdc.nal.usda.gov — domaine public (CC0 1.0).
+  Base dérivée assemblée par scan..
+
+La colonne « sources » indique d'où vient chaque produit. Les produits venant seulement du DSLD ou de
+FoodData Central sont dans le domaine public ; ils sont publiés ici avec le reste, sous ODbL, comme
+une seule base.
+
+COLONNES de produits.csv.gz :
+  gtin              code-barres sur 14 chiffres (zéros à gauche)
+  name, brand       nom et marque
+  cat               catégorie attribuée par scan. (whey, creatine, magnesium…)
+  quantity          contenance indiquée
+  serving_size      portion indiquée
+  dose_g / dose_n / dose_u   dose par prise retenue par scan. (grammes, ou nombre d'unités + unité)
+  dose_src          origine de la dose : etiquette, photo (lue sur la photo de l'étiquette), texte,
+                    unite (produit à l'unité), habituelle (valeur type choisie par scan., pas l'étiquette)
+  kcal_100g, protein_100g, sugars_100g, carbs_100g        pour 100 g
+  kcal_serving, protein_serving, sugars_serving, carbs_serving  par portion
+  additives_n       nombre d'additifs
+  bio               1 si un label bio est indiqué
+  ingredients_text  liste des ingrédients (coupée à 700 caractères)
+  origin            pays de fabrication (code ISO), seulement s'il vient d'Open Food Facts
+  sources           bases d'origine du produit
+
+COLONNES de prix-open-prices.csv.gz : gtin, price, currency, store, date, url (page Open Prices).
+
+NON INCLUS : les prix relevés sur les sites des boutiques (autres conditions d'utilisation), les notes
+calculées par scan. (œuvres produites, art. 4.3 de l'ODbL), les photos.
+
+Données fournies sans garantie d'exactitude ni d'exhaustivité. Signaler une erreur : voir la page
+Support du site.

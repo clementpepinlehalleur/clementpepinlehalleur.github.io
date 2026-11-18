@@ -1,0 +1,29 @@
+{
+ "date": "2026-10-13",
+ "files": [
+  {
+   "file": "produits.csv.gz",
+   "rows": 187552,
+   "bytes": 7142189
+  },
+  {
+   "file": "prix-open-prices.csv.gz",
+   "rows": 1018,
+   "bytes": 15387
+  }
+ ],
+ "stats": {
+  "sans_source": 0,
+  "origine_retiree": 20,
+  "prix_boutiques_exclus": 556,
+  "par_source": {
+   "dsld": 93824,
+   "openfoodfacts": 81606,
+   "dsld+openfoodfacts": 3601,
+   "usda_fdc": 5883,
+   "openfoodfacts+usda_fdc": 2286,
+   "dsld+openfoodfacts+usda_fdc": 208,
+   "dsld+usda_fdc": 144
+  }
+ }
+}

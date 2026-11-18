@@ -1,0 +1,16 @@
+{
+ "schema": 1,
+ "version": 2,
+ "date": "2026-10-25",
+ "base": 10,
+ "min_app": "1.0.0",
+ "total": 189524,
+ "files": [
+  {
+   "path": "patch-2-0.json",
+   "sha256": "8c4145b75154b46f009edba9a32b0954ebd93313a32ffca5a7f20c035472ad8e",
+   "bytes": 390,
+   "n": 0
+  }
+ ]
+}

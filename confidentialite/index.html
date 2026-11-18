@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Politique de confidentialité de Scoo</title>
+<meta name="description" content="Comment Scoo traite vos données : pas de serveur, pas de compte.">
+<meta name="referrer" content="no-referrer">
+<link rel="stylesheet" href="../style.css">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="canonical" href="https://clementpepinlehalleur.github.io/scan-app-site/confidentialite/">
+</head>
+<body>
+<!--
+NOTE INTERNE (non affichée) : à mettre à jour AVANT d'activer la publicité (docs/legal-et-argent/README monétisation.md).
+La publicité n'existe pas encore : rien n'est écrit ici à son sujet, volontairement.
+Le jour où AdMob est activé, modifier d'abord mobile/src/data/legal.ts (puis relancer ce générateur) :
+- « En bref » : retirer « Aucune publicité » ; dire que la version gratuite affiche des publicités (sauf achat « sans pub »).
+- Nouvelle section « Publicité » : régie Google AdMob (Google Ireland Limited) ; données reçues par Google :
+  identifiant publicitaire (IDFA sur iPhone si l'utilisateur l'autorise via ATT, AAID sur Android), adresse IP,
+  informations sur l'appareil, interactions avec la publicité ; aucune donnée du profil ni de santé n'est transmise ;
+  catégories bloquées (santé et compléments, alcool, jeux d'argent, rencontres, politique).
+- Consentement : formulaire Google UMP (TCF, obligatoire dans l'EEE, au Royaume-Uni et en Suisse) ; sur iPhone,
+  fenêtre ATT d'Apple ; sans accord : publicités non personnalisées ; comment retirer son accord dans l'app.
+- Bases légales : consentement (art. 6.1.a RGPD et ePrivacy) pour la pub personnalisée ; intérêt légitime ou
+  consentement selon le TCF pour la pub non personnalisée.
+- Transferts hors UE : Google LLC (États-Unis), Data Privacy Framework / clauses contractuelles types.
+- Achat « sans pub » : paiement traité par Apple ou Google ; l'éditeur ne reçoit aucune donnée de paiement.
+- Durées de conservation côté Google (renvoyer vers sa politique).
+- Mentions légales : retirer « aucune publicité » (ABOUT) ; ajouter statut professionnel, numéro KvK ou SIREN, adresse.
+- Hors site : étiquettes de confidentialité de l'App Store, « Sécurité des données » du Play Store, app-ads.txt.
+-->
+<header class="top"><div class="wrap">
+<a class="brand" href="../" aria-label="Scoo : Accueil">Scoo<span></span></a>
+<a class="lang" href="../privacy/" hreflang="en" lang="en">English</a>
+</div></header>
+<main><div class="wrap">
+<h1>Politique de confidentialité de Scoo</h1>
+<p class="meta">Dernière mise à jour : 17 novembre 2026 &#183; version 1.4</p>
+<div class="card accent">
+<h2>En bref</h2>
+<p>Scoo n&#39;a pas de serveur et pas de compte. Ce que vous saisissez (profil, placard, traitements, allergies, expériences) reste sur votre téléphone : l&#39;éditeur n&#39;y a jamais accès.</p>
+<p>Certaines fonctions contactent des services publics ou ouverts. Cette page dit lesquels, quand, et ce qu&#39;ils reçoivent.</p>
+<p>Aucune publicité, aucune mesure d&#39;audience, aucun traceur.</p>
+<p>Un message envoyé avec « Signaler un problème » arrive à l&#39;éditeur : ce que vous écrivez, le produit concerné et, si vous les joignez, les infos techniques.</p>
+</div>
+<section>
+<h2>1. Qui est responsable ?</h2>
+<p>L&#39;éditeur de Scoo, indiqué dans les Mentions légales. Pour toute question sur vos données, écrivez à l&#39;adresse de contact.</p>
+<p><strong>Éditeur</strong> : Clement Pepin Lehalleur<br><strong>Contact</strong> : <a href="mailto:scanapp.contact@protonmail.com">scanapp.contact@protonmail.com</a></p>
+</section>
+<section>
+<h2>2. Données gardées sur votre téléphone</h2>
+<p>Profil : pays, âge, sexe, poids, objectifs, sports, régime, allergies, contrôles anti-dopage.</p>
+<p>Suivi du poids : vos mesures de poids et leur date.</p>
+<p>Santé : familles de médicaments cochées dans « Mes traitements », séances, expériences (sommeil, énergie).</p>
+<p>« Mes traitements » n&#39;enregistre rien sans votre accord explicite. Vous pouvez le retirer à tout moment : vos traitements sont alors effacés.</p>
+<p>Utilisation : placard, favoris, historique des scans, rappels, pots, produits consultés, photos d&#39;étiquettes.</p>
+<p>Apple Santé, si vous le connectez : poids, entraînements, sommeil et protéines mangées dans la journée, en lecture seule. L&#39;app n&#39;écrit rien dans Apple Santé.</p>
+<p>Ces données servent seulement à faire fonctionner l&#39;app pour vous : besoins du jour, alertes (allergènes, surdosage, interactions), rappels. Elles ne sont ni envoyées à l&#39;éditeur, ni vendues, ni utilisées pour de la publicité.</p>
+<p>La photo d&#39;une étiquette est lue sur le téléphone. Elle n&#39;est jamais envoyée.</p>
+<p>Elles peuvent être copiées dans la sauvegarde de votre téléphone (iCloud ou Google) si vous l&#39;avez activée. Cette sauvegarde est gérée par Apple ou Google, sous votre compte.</p>
+</section>
+<section>
+<h2>3. Services contactés par l&#39;app</h2>
+<p>Comme pour tout site web, chaque service reçoit l&#39;adresse IP de votre connexion avec la demande. L&#39;app n&#39;y ajoute aucun identifiant.</p>
+<p>Les rappels des États-Unis (openFDA) sont inclus dans l&#39;app : aucune demande n&#39;est envoyée à la FDA.</p>
+<table class="stack">
+<thead><tr><th>Service</th><th>Quand</th><th>Ce qui est envoyé</th><th>Opéré par</th></tr></thead>
+<tbody>
+<tr><td>Open Food Facts</td><td>Vous scannez ou saisissez un code-barres absent de la base de l&#39;app.</td><td>Le code-barres de ce produit.</td><td>Open Food Facts (association, France).</td></tr>
+<tr><td>RappelConso</td><td>Au plus une fois par jour, à l&#39;ouverture de l&#39;app, pour télécharger la liste des rappels de produits alimentaires des 12 derniers mois.</td><td>Aucune donnée sur vous : la liste est la même pour tout le monde et l&#39;app la compare sur le téléphone avec vos produits.</td><td>Ministère de l&#39;Économie (France), data.economie.gouv.fr.</td></tr>
+<tr><td>Site de l&#39;app (GitHub Pages)</td><td>Au plus une fois par jour, pour savoir si la base de produits a une mise à jour, puis pour la télécharger.</td><td>Aucune donnée sur vous : une simple demande de fichier, la même pour tout le monde.</td><td>GitHub (Microsoft, États-Unis), qui héberge le site de l&#39;app.</td></tr>
+<tr><td>Overpass API</td><td>Vous ouvrez « Magasins proches » avec la position du téléphone, hors iPhone ou si Plans d&#39;Apple ne trouve rien.</td><td>Une position arrondie à environ 100 m et le rayon de recherche. L&#39;app n&#39;enregistre pas votre position.</td><td>FOSSGIS e.V. (Allemagne), données OpenStreetMap.</td></tr>
+<tr><td>Nominatim</td><td>Vous cherchez une ville ou un code postal dans « Magasins proches ».</td><td>Le texte saisi.</td><td>Fondation OpenStreetMap (Royaume-Uni).</td></tr>
+<tr><td>Plans d&#39;Apple / Google Maps</td><td>Vous cherchez des magasins proches sur iPhone, affichez la carte des magasins ou touchez « Itinéraire ».</td><td>Recherche de magasins : une position arrondie à environ 100 m. Carte : la zone affichée. Itinéraire : l&#39;emplacement du magasin choisi.</td><td>Apple (iPhone) ou Google (Android).</td></tr>
+<tr><td>Web3Forms</td><td>Vous envoyez un message avec « Signaler un problème ».</td><td>Le type et le texte du message, l&#39;e-mail de réponse si vous le donnez, le produit concerné s&#39;il y en a un et, si la case est cochée, la version de l&#39;app, le système, la langue et le pays. Le message est ensuite remis à l&#39;adresse de contact de l&#39;éditeur.</td><td>Web3Creative (Inde), serveurs Amazon Web Services. Avec « Envoyer avec Mail », le message part de votre propre messagerie.</td></tr>
+<tr><td>Liens externes</td><td>Vous touchez un lien : avis officiel de rappel, prix d&#39;une boutique, source d&#39;une étude.</td><td>La page s&#39;ouvre dans votre navigateur.</td><td>Le site visité, selon ses propres règles.</td></tr>
+</tbody>
+</table>
+</section>
+<section>
+<h2>4. Autorisations</h2>
+<p>Appareil photo : lire un code-barres, photographier une étiquette. Les images restent sur le téléphone.</p>
+<p>Position « pendant l&#39;utilisation » : magasins proches seulement.</p>
+<p>Notifications : rappels de prise et alertes, programmés sur le téléphone.</p>
+<p>Photos : enregistrer une image que vous choisissez de partager.</p>
+<p>Apple Santé : lecture seule, si vous l&#39;activez.</p>
+<p>Toutes sont facultatives et se retirent dans les réglages du téléphone.</p>
+</section>
+<section>
+<h2>5. Partage</h2>
+<p>Quand vous partagez votre stack ou votre placard, la liste de vos produits est écrite dans le lien ou le QR code : toute personne qui le reçoit peut la voir. Aucun serveur n&#39;intervient.</p>
+<p>Avec Scoo+, l&#39;export PDF est créé sur le téléphone. Vous choisissez à qui l&#39;envoyer (e-mail, message…) : l&#39;app ne l&#39;envoie à personne.</p>
+</section>
+<section>
+<h2>6. Bases légales</h2>
+<p>Recherches que vous lancez (produit inconnu, magasins, carte) : exécution du service demandé (article 6.1.b du RGPD).</p>
+<p>Vérification des rappels : intérêt légitime à vous prévenir d&#39;un rappel de produit (article 6.1.f du RGPD).</p>
+<p>Données de santé : elles restent sur le téléphone et l&#39;éditeur ne les reçoit pas. Vous choisissez de les saisir, et pouvez les effacer à tout moment.</p>
+<p>Messages de « Signaler un problème » : réponse à votre demande (article 6.1.b du RGPD).</p>
+</section>
+<section>
+<h2>7. Durée de conservation</h2>
+<p>Sur le téléphone : tant que vous ne les effacez pas (« Tout effacer » dans le Profil, ou en désinstallant l&#39;app).</p>
+<p>Réponses des services en ligne : gardées sur le téléphone pour ne pas refaire la même demande.</p>
+<p>L&#39;éditeur ne reçoit que les messages de « Signaler un problème » : gardés le temps de traiter la demande, au plus un an, puis effacés.</p>
+</section>
+<section>
+<h2>8. Transferts hors de l&#39;Union européenne</h2>
+<p>Nominatim est opéré depuis le Royaume-Uni, pays reconnu par l&#39;Union européenne comme offrant une protection adéquate. Apple et Google appliquent leurs propres règles.</p>
+<p>Web3Forms est opéré depuis l&#39;Inde : un message envoyé directement avec « Signaler un problème » quitte l&#39;Union européenne. Pour l&#39;éviter, choisissez « Envoyer avec Mail ».</p>
+</section>
+<section>
+<h2>9. Vos droits</h2>
+<p>Accès, rectification, effacement, opposition, portabilité : vos données étant sur votre téléphone, vous les consultez, les modifiez et les effacez directement dans l&#39;app.</p>
+<p>Pour ce qu&#39;un service tiers reçoit (adresse IP, demande), adressez-vous à ce service.</p>
+<p>Pour toute question, écrivez à l&#39;adresse de contact. Vous pouvez aussi saisir l&#39;autorité de protection des données de votre pays, par exemple la CNIL en France ou l&#39;Autoriteit Persoonsgegevens aux Pays-Bas.</p>
+</section>
+<section>
+<h2>10. Mineurs</h2>
+<p>Scoo s&#39;adresse aux personnes de 18 ans et plus.</p>
+</section>
+<section>
+<h2>11. Changements</h2>
+<p>Toute modification sera datée sur cette page et signalée dans l&#39;app.</p>
+</section>
+<p class="small">Ce texte est celui affiché dans l&#39;application (Profil › Réglages › Confidentialité).</p>
+</div></main>
+<footer class="bottom"><div class="wrap">
+<nav aria-label="Pages du site">
+<a href="../confidentialite/">Confidentialité</a>
+<a href="../mentions-legales/">Mentions légales</a>
+<a href="../sources/">Sources et licences</a>
+<a href="../donnees/">Données ouvertes</a>
+<a href="../support/">Support</a>
+</nav>
+<p>Scoo &#183; Clement Pepin Lehalleur &#183; <a href="mailto:scanapp.contact@protonmail.com">scanapp.contact@protonmail.com</a></p>
+</div></footer>
+</body>
+</html>
