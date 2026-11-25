@@ -1,7 +1,7 @@
 {
   "_lisez_moi": "Seul endroit à modifier pour changer le nom de l'app ou l'adresse du site. Puis : node _build/build.js (voir README.md). L'éditeur et l'e-mail sont lus dans mobile/src/data/legal.ts (LEGAL).",
   "name": "WaSupp",
-  "base_url": "https://clementpepinlehalleur.github.io/scan-app-site/",
+  "base_url": "https://clementpepinlehalleur.github.io/",
   "tagline_fr": "La note des compléments alimentaires, lue sur l'étiquette.",
   "tagline_en": "Supplement scores, read from the label.",
   "legal_ts": "../../mobile/src/data/legal.ts",
