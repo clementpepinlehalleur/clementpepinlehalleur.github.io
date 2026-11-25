@@ -17,7 +17,7 @@ const load = (f) => {
   return m.exports;
 };
 const L = load(P('legal_ts'));
-const EN = { ...load(P('legal_en_ts')).extra.en, ...load(path.resolve(path.dirname(P('legal_en_ts')), 'accord1711.ts')).extra.en }; // + accord Mes traitements (17 nov. 2026)
+const EN = { ...load(P('legal_en_ts')).extra.en, ...load(path.resolve(path.dirname(P('legal_en_ts')), 'accord1711.ts')).extra.en, ...load(path.resolve(path.dirname(P('legal_en_ts')), 'legal2511.ts')).extra.en }; // + accord Mes traitements (17 nov. 2026)
 const LIBS = JSON.parse(fs.readFileSync(P('licenses_json'), 'utf8'));
 
 const NAME = CFG.name;
@@ -89,23 +89,13 @@ const write = (rel, html) => {
 };
 
 /* ---------- note interne : à faire avant d'activer la publicité (docs/legal-et-argent/README monétisation.md) ---------- */
-const ADS_TODO = `NOTE INTERNE (non affichée) : à mettre à jour AVANT d'activer la publicité (docs/legal-et-argent/README monétisation.md).
-La publicité n'existe pas encore : rien n'est écrit ici à son sujet, volontairement.
-Le jour où AdMob est activé, modifier d'abord mobile/src/data/legal.ts (puis relancer ce générateur) :
-- « En bref » : retirer « Aucune publicité » ; dire que la version gratuite affiche des publicités (sauf achat « sans pub »).
-- Nouvelle section « Publicité » : régie Google AdMob (Google Ireland Limited) ; données reçues par Google :
-  identifiant publicitaire (IDFA sur iPhone si l'utilisateur l'autorise via ATT, AAID sur Android), adresse IP,
-  informations sur l'appareil, interactions avec la publicité ; aucune donnée du profil ni de santé n'est transmise ;
-  catégories bloquées (santé et compléments, alcool, jeux d'argent, rencontres, politique).
-- Consentement : formulaire Google UMP (TCF, obligatoire dans l'EEE, au Royaume-Uni et en Suisse) ; sur iPhone,
-  fenêtre ATT d'Apple ; sans accord : publicités non personnalisées ; comment retirer son accord dans l'app.
-- Bases légales : consentement (art. 6.1.a RGPD et ePrivacy) pour la pub personnalisée ; intérêt légitime ou
-  consentement selon le TCF pour la pub non personnalisée.
-- Transferts hors UE : Google LLC (États-Unis), Data Privacy Framework / clauses contractuelles types.
-- Achat « sans pub » : paiement traité par Apple ou Google ; l'éditeur ne reçoit aucune donnée de paiement.
-- Durées de conservation côté Google (renvoyer vers sa politique).
-- Mentions légales : retirer « aucune publicité » (ABOUT) ; ajouter statut professionnel, numéro KvK ou SIREN, adresse.
-- Hors site : étiquettes de confidentialité de l'App Store, « Sécurité des données » du Play Store, app-ads.txt.`;
+const ADS_TODO = `NOTE INTERNE (non affichée), mise à jour le 25 nov. 2026 : la publicité (Google AdMob) est branchée dans l'app.
+FAIT dans mobile/src/data/legal.ts (politique 1.5) : « En bref », section « Publicités » (données reçues par Google, rien du
+profil ni de santé, catégories bloquées, formulaire RGPD de Google, ATT sur iPhone, réglage « Choix pour les publicités »,
+achat WaSupp+ payé par Apple / Google), service Google AdMob, bases légales, conservation, transfert États-Unis (DPF), droits,
+« aucune publicité » retiré des mentions (ABOUT).
+RESTE : mentions légales (statut micro-entreprise, SIREN, adresse ou domiciliation) dès réception du SIRET ; hors site :
+étiquettes de confidentialité de l'App Store, « Sécurité des données » du Play Store.`;
 
 /* ---------- politique de confidentialité (même rendu que mobile/scripts/legal/html.js) ---------- */
 function privacy(lang) {

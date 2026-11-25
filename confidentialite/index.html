@@ -12,23 +12,13 @@
 </head>
 <body>
 <!--
-NOTE INTERNE (non affichée) : à mettre à jour AVANT d'activer la publicité (docs/legal-et-argent/README monétisation.md).
-La publicité n'existe pas encore : rien n'est écrit ici à son sujet, volontairement.
-Le jour où AdMob est activé, modifier d'abord mobile/src/data/legal.ts (puis relancer ce générateur) :
-- « En bref » : retirer « Aucune publicité » ; dire que la version gratuite affiche des publicités (sauf achat « sans pub »).
-- Nouvelle section « Publicité » : régie Google AdMob (Google Ireland Limited) ; données reçues par Google :
-  identifiant publicitaire (IDFA sur iPhone si l'utilisateur l'autorise via ATT, AAID sur Android), adresse IP,
-  informations sur l'appareil, interactions avec la publicité ; aucune donnée du profil ni de santé n'est transmise ;
-  catégories bloquées (santé et compléments, alcool, jeux d'argent, rencontres, politique).
-- Consentement : formulaire Google UMP (TCF, obligatoire dans l'EEE, au Royaume-Uni et en Suisse) ; sur iPhone,
-  fenêtre ATT d'Apple ; sans accord : publicités non personnalisées ; comment retirer son accord dans l'app.
-- Bases légales : consentement (art. 6.1.a RGPD et ePrivacy) pour la pub personnalisée ; intérêt légitime ou
-  consentement selon le TCF pour la pub non personnalisée.
-- Transferts hors UE : Google LLC (États-Unis), Data Privacy Framework / clauses contractuelles types.
-- Achat « sans pub » : paiement traité par Apple ou Google ; l'éditeur ne reçoit aucune donnée de paiement.
-- Durées de conservation côté Google (renvoyer vers sa politique).
-- Mentions légales : retirer « aucune publicité » (ABOUT) ; ajouter statut professionnel, numéro KvK ou SIREN, adresse.
-- Hors site : étiquettes de confidentialité de l'App Store, « Sécurité des données » du Play Store, app-ads.txt.
+NOTE INTERNE (non affichée), mise à jour le 25 nov. 2026 : la publicité (Google AdMob) est branchée dans l'app.
+FAIT dans mobile/src/data/legal.ts (politique 1.5) : « En bref », section « Publicités » (données reçues par Google, rien du
+profil ni de santé, catégories bloquées, formulaire RGPD de Google, ATT sur iPhone, réglage « Choix pour les publicités »,
+achat WaSupp+ payé par Apple / Google), service Google AdMob, bases légales, conservation, transfert États-Unis (DPF), droits,
+« aucune publicité » retiré des mentions (ABOUT).
+RESTE : mentions légales (statut micro-entreprise, SIREN, adresse ou domiciliation) dès réception du SIRET ; hors site :
+étiquettes de confidentialité de l'App Store, « Sécurité des données » du Play Store.
 -->
 <header class="top"><div class="wrap">
 <a class="brand" href="../" aria-label="WaSupp : Accueil">WaSupp<span></span></a>
@@ -36,12 +26,12 @@ Le jour où AdMob est activé, modifier d'abord mobile/src/data/legal.ts (puis r
 </div></header>
 <main><div class="wrap">
 <h1>Politique de confidentialité de WaSupp</h1>
-<p class="meta">Dernière mise à jour : 17 novembre 2026 &#183; version 1.4</p>
+<p class="meta">Dernière mise à jour : 25 novembre 2026 &#183; version 1.5</p>
 <div class="card accent">
 <h2>En bref</h2>
 <p>WaSupp n&#39;a pas de serveur et pas de compte. Ce que vous saisissez (profil, placard, traitements, allergies, expériences) reste sur votre téléphone : l&#39;éditeur n&#39;y a jamais accès.</p>
 <p>Certaines fonctions contactent des services publics ou ouverts. Cette page dit lesquels, quand, et ce qu&#39;ils reçoivent.</p>
-<p>Aucune publicité, aucune mesure d&#39;audience, aucun traceur.</p>
+<p>Sans WaSupp+, l&#39;app affiche des publicités de Google (AdMob). Google ne reçoit jamais votre profil ni vos données de santé. En Europe, vous choisissez d&#39;abord si vos données peuvent servir à personnaliser les publicités.</p>
 <p>Un message envoyé avec « Signaler un problème » arrive à l&#39;éditeur : ce que vous écrivez, le produit concerné et, si vous les joignez, les infos techniques.</p>
 </div>
 <section>
@@ -63,7 +53,7 @@ Le jour où AdMob est activé, modifier d'abord mobile/src/data/legal.ts (puis r
 </section>
 <section>
 <h2>3. Services contactés par l&#39;app</h2>
-<p>Comme pour tout site web, chaque service reçoit l&#39;adresse IP de votre connexion avec la demande. L&#39;app n&#39;y ajoute aucun identifiant.</p>
+<p>Comme pour tout site web, chaque service reçoit l&#39;adresse IP de votre connexion avec la demande. L&#39;app n&#39;y ajoute aucun identifiant, sauf pour les publicités (voir « Publicités » ci-dessous).</p>
 <p>Les rappels des États-Unis (openFDA) sont inclus dans l&#39;app : aucune demande n&#39;est envoyée à la FDA.</p>
 <table class="stack">
 <thead><tr><th>Service</th><th>Quand</th><th>Ce qui est envoyé</th><th>Opéré par</th></tr></thead>
@@ -75,54 +65,72 @@ Le jour où AdMob est activé, modifier d'abord mobile/src/data/legal.ts (puis r
 <tr><td>Nominatim</td><td>Vous cherchez une ville ou un code postal dans « Magasins proches ».</td><td>Le texte saisi.</td><td>Fondation OpenStreetMap (Royaume-Uni).</td></tr>
 <tr><td>Plans d&#39;Apple / Google Maps</td><td>Vous cherchez des magasins proches sur iPhone, affichez la carte des magasins ou touchez « Itinéraire ».</td><td>Recherche de magasins : une position arrondie à environ 100 m. Carte : la zone affichée. Itinéraire : l&#39;emplacement du magasin choisi.</td><td>Apple (iPhone) ou Google (Android).</td></tr>
 <tr><td>Web3Forms</td><td>Vous envoyez un message avec « Signaler un problème ».</td><td>Le type et le texte du message, l&#39;e-mail de réponse si vous le donnez, le produit concerné s&#39;il y en a un et, si la case est cochée, la version de l&#39;app, le système, la langue et le pays. Le message est ensuite remis à l&#39;adresse de contact de l&#39;éditeur.</td><td>Web3Creative (Inde), serveurs Amazon Web Services. Avec « Envoyer avec Mail », le message part de votre propre messagerie.</td></tr>
+<tr><td>Google AdMob</td><td>Sans WaSupp+, au lancement de l&#39;app et pour chaque publicité.</td><td>Voir « Publicités » ci-dessous.</td><td>Google Ireland Limited (Irlande) et Google LLC (États-Unis).</td></tr>
 <tr><td>Liens externes</td><td>Vous touchez un lien : avis officiel de rappel, prix d&#39;une boutique, source d&#39;une étude.</td><td>La page s&#39;ouvre dans votre navigateur.</td><td>Le site visité, selon ses propres règles.</td></tr>
 </tbody>
 </table>
 </section>
 <section>
-<h2>4. Autorisations</h2>
+<h2>4. Publicités</h2>
+<p>Sans WaSupp+, l&#39;app affiche des publicités : en quittant la fiche d&#39;un produit scanné, en bas de l&#39;accueil, et quand vous choisissez de regarder une publicité pour débloquer une icône. Elles sont fournies par Google AdMob. Avec WaSupp+, il n&#39;y a aucune publicité et AdMob n&#39;est pas démarré.</p>
+<p>Ce que Google reçoit : l&#39;adresse IP, l&#39;identifiant publicitaire du téléphone (sur iPhone, seulement si vous autorisez le suivi), des informations techniques (modèle, système, langue, version de l&#39;app) et la façon dont les publicités sont affichées et touchées. Google s&#39;en sert pour choisir, afficher et mesurer les publicités, et pour lutter contre la fraude.</p>
+<p>Ce que Google ne reçoit jamais : votre profil, vos compléments, vos allergies, vos traitements, ni aucune donnée de santé. Les publicités pour des compléments alimentaires, des médicaments ou des régimes sont bloquées.</p>
+<p>En Europe, au Royaume-Uni et en Suisse, un formulaire de Google vous demande votre accord avant toute publicité personnalisée. Vous pouvez refuser : vous verrez alors des publicités non personnalisées ou limitées. Vous changez d&#39;avis à tout moment dans Réglages › Choix pour les publicités.</p>
+<p>Sur iPhone, Apple vous demande si l&#39;app peut vous suivre. Si vous refusez, l&#39;identifiant publicitaire n&#39;est pas partagé. Sur Android, vous pouvez supprimer ou réinitialiser cet identifiant dans les réglages du téléphone.</p>
+<p>Les publicités n&#39;ont aucun effet sur les notes et les classements.</p>
+<p>L&#39;achat de WaSupp+ est payé par l&#39;App Store ou Google Play. L&#39;éditeur ne reçoit aucune donnée de paiement.</p>
+<p>Google traite ces données selon ses propres règles : policies.google.com/technologies/partner-sites</p>
+</section>
+<section>
+<h2>5. Autorisations</h2>
 <p>Appareil photo : lire un code-barres, photographier une étiquette. Les images restent sur le téléphone.</p>
 <p>Position « pendant l&#39;utilisation » : magasins proches seulement.</p>
 <p>Notifications : rappels de prise et alertes, programmés sur le téléphone.</p>
 <p>Photos : enregistrer une image que vous choisissez de partager.</p>
 <p>Apple Santé : lecture seule, si vous l&#39;activez.</p>
+<p>Suivi (iPhone) : demandé pour les publicités personnalisées.</p>
 <p>Toutes sont facultatives et se retirent dans les réglages du téléphone.</p>
 </section>
 <section>
-<h2>5. Partage</h2>
+<h2>6. Partage</h2>
 <p>Quand vous partagez votre stack ou votre placard, la liste de vos produits est écrite dans le lien ou le QR code : toute personne qui le reçoit peut la voir. Aucun serveur n&#39;intervient.</p>
 <p>Avec WaSupp+, l&#39;export PDF est créé sur le téléphone. Vous choisissez à qui l&#39;envoyer (e-mail, message…) : l&#39;app ne l&#39;envoie à personne.</p>
 </section>
 <section>
-<h2>6. Bases légales</h2>
+<h2>7. Bases légales</h2>
 <p>Recherches que vous lancez (produit inconnu, magasins, carte) : exécution du service demandé (article 6.1.b du RGPD).</p>
 <p>Vérification des rappels : intérêt légitime à vous prévenir d&#39;un rappel de produit (article 6.1.f du RGPD).</p>
 <p>Données de santé : elles restent sur le téléphone et l&#39;éditeur ne les reçoit pas. Vous choisissez de les saisir, et pouvez les effacer à tout moment.</p>
 <p>Messages de « Signaler un problème » : réponse à votre demande (article 6.1.b du RGPD).</p>
+<p>Publicités personnalisées et accès à l&#39;identifiant publicitaire : votre consentement (article 6.1.a du RGPD), que vous pouvez retirer à tout moment.</p>
+<p>Publicités non personnalisées : intérêt légitime à financer l&#39;app gratuite (article 6.1.f du RGPD), ou votre consentement quand le formulaire de Google le demande.</p>
 </section>
 <section>
-<h2>7. Durée de conservation</h2>
+<h2>8. Durée de conservation</h2>
 <p>Sur le téléphone : tant que vous ne les effacez pas (« Tout effacer » dans le Profil, ou en désinstallant l&#39;app).</p>
 <p>Réponses des services en ligne : gardées sur le téléphone pour ne pas refaire la même demande.</p>
 <p>L&#39;éditeur ne reçoit que les messages de « Signaler un problème » : gardés le temps de traiter la demande, au plus un an, puis effacés.</p>
+<p>Données reçues par Google pour les publicités : gardées selon les règles de Google.</p>
 </section>
 <section>
-<h2>8. Transferts hors de l&#39;Union européenne</h2>
+<h2>9. Transferts hors de l&#39;Union européenne</h2>
 <p>Nominatim est opéré depuis le Royaume-Uni, pays reconnu par l&#39;Union européenne comme offrant une protection adéquate. Apple et Google appliquent leurs propres règles.</p>
 <p>Web3Forms est opéré depuis l&#39;Inde : un message envoyé directement avec « Signaler un problème » quitte l&#39;Union européenne. Pour l&#39;éviter, choisissez « Envoyer avec Mail ».</p>
+<p>Google peut traiter les données des publicités aux États-Unis, dans le cadre du Data Privacy Framework entre l&#39;Union européenne et les États-Unis.</p>
 </section>
 <section>
-<h2>9. Vos droits</h2>
+<h2>10. Vos droits</h2>
 <p>Accès, rectification, effacement, opposition, portabilité : vos données étant sur votre téléphone, vous les consultez, les modifiez et les effacez directement dans l&#39;app.</p>
 <p>Pour ce qu&#39;un service tiers reçoit (adresse IP, demande), adressez-vous à ce service.</p>
+<p>Publicités : Réglages › Choix pour les publicités, et les réglages du téléphone (suivi, identifiant publicitaire).</p>
 <p>Pour toute question, écrivez à l&#39;adresse de contact. Vous pouvez aussi saisir l&#39;autorité de protection des données de votre pays, par exemple la CNIL en France ou l&#39;Autoriteit Persoonsgegevens aux Pays-Bas.</p>
 </section>
 <section>
-<h2>10. Mineurs</h2>
+<h2>11. Mineurs</h2>
 <p>WaSupp s&#39;adresse aux personnes de 18 ans et plus.</p>
 </section>
 <section>
-<h2>11. Changements</h2>
+<h2>12. Changements</h2>
 <p>Toute modification sera datée sur cette page et signalée dans l&#39;app.</p>
 </section>
 <p class="small">Ce texte est celui affiché dans l&#39;application (Profil › Réglages › Confidentialité).</p>

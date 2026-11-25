@@ -12,23 +12,13 @@
 </head>
 <body>
 <!--
-NOTE INTERNE (non affichée) : à mettre à jour AVANT d'activer la publicité (docs/legal-et-argent/README monétisation.md).
-La publicité n'existe pas encore : rien n'est écrit ici à son sujet, volontairement.
-Le jour où AdMob est activé, modifier d'abord mobile/src/data/legal.ts (puis relancer ce générateur) :
-- « En bref » : retirer « Aucune publicité » ; dire que la version gratuite affiche des publicités (sauf achat « sans pub »).
-- Nouvelle section « Publicité » : régie Google AdMob (Google Ireland Limited) ; données reçues par Google :
-  identifiant publicitaire (IDFA sur iPhone si l'utilisateur l'autorise via ATT, AAID sur Android), adresse IP,
-  informations sur l'appareil, interactions avec la publicité ; aucune donnée du profil ni de santé n'est transmise ;
-  catégories bloquées (santé et compléments, alcool, jeux d'argent, rencontres, politique).
-- Consentement : formulaire Google UMP (TCF, obligatoire dans l'EEE, au Royaume-Uni et en Suisse) ; sur iPhone,
-  fenêtre ATT d'Apple ; sans accord : publicités non personnalisées ; comment retirer son accord dans l'app.
-- Bases légales : consentement (art. 6.1.a RGPD et ePrivacy) pour la pub personnalisée ; intérêt légitime ou
-  consentement selon le TCF pour la pub non personnalisée.
-- Transferts hors UE : Google LLC (États-Unis), Data Privacy Framework / clauses contractuelles types.
-- Achat « sans pub » : paiement traité par Apple ou Google ; l'éditeur ne reçoit aucune donnée de paiement.
-- Durées de conservation côté Google (renvoyer vers sa politique).
-- Mentions légales : retirer « aucune publicité » (ABOUT) ; ajouter statut professionnel, numéro KvK ou SIREN, adresse.
-- Hors site : étiquettes de confidentialité de l'App Store, « Sécurité des données » du Play Store, app-ads.txt.
+NOTE INTERNE (non affichée), mise à jour le 25 nov. 2026 : la publicité (Google AdMob) est branchée dans l'app.
+FAIT dans mobile/src/data/legal.ts (politique 1.5) : « En bref », section « Publicités » (données reçues par Google, rien du
+profil ni de santé, catégories bloquées, formulaire RGPD de Google, ATT sur iPhone, réglage « Choix pour les publicités »,
+achat WaSupp+ payé par Apple / Google), service Google AdMob, bases légales, conservation, transfert États-Unis (DPF), droits,
+« aucune publicité » retiré des mentions (ABOUT).
+RESTE : mentions légales (statut micro-entreprise, SIREN, adresse ou domiciliation) dès réception du SIRET ; hors site :
+étiquettes de confidentialité de l'App Store, « Sécurité des données » du Play Store.
 -->
 <header class="top"><div class="wrap">
 <a class="brand" href="../" aria-label="WaSupp : Accueil">WaSupp<span></span></a>
@@ -47,7 +37,7 @@ Le jour où AdMob est activé, modifier d'abord mobile/src/data/legal.ts (puis r
 <p><strong>Ce site</strong> est hébergé par GitHub Pages : GitHub, Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, États-Unis (<a href="https://github.com" rel="noopener">github.com</a>).</p>
 <p>WaSupp est une application gratuite d&#39;information sur les compléments alimentaires et la nutrition sportive.</p>
 <p>Hébergement : WaSupp n&#39;a pas de serveur. Aucune donnée n&#39;est hébergée par l&#39;éditeur, sauf les messages de « Signaler un problème », reçus dans sa boîte mail (Proton, Suisse). L&#39;application est distribuée par l&#39;App Store (Apple) et Google Play (Google).</p>
-<p>Indépendance : aucune publicité, aucun lien commercial avec les marques ou les boutiques citées, aucune commission.</p>
+<p>Indépendance : aucun lien commercial avec les marques ou les boutiques citées, aucune commission. Les publicités (Google AdMob) n&#39;influencent jamais les notes, et celles de compléments alimentaires sont bloquées.</p>
 </section>
 <section>
 <h2>Avertissement médical</h2>
